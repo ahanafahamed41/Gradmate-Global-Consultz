@@ -16,15 +16,23 @@ nav{background:#fff;display:flex;align-items:center;justify-content:space-betwee
 .kicker{display:inline-block;background:var(--blue);color:white;padding:7px 17px;border-radius:30px;font-weight:700}
 h1{font-size:clamp(34px,5vw,58px);line-height:1.08;margin:18px 0;color:var(--navy)}h1 span{color:#e8a900}
 .hero p{font-size:19px;max-width:650px;color:#203858}.checks{padding:0;list-style:none;font-weight:700}.checks li{margin:8px 0}.checks li:before{content:"✓";color:#fff;background:var(--blue);border-radius:50%;padding:1px 6px;margin-right:9px}
-.btn{display:inline-block;background:var(--gold);color:#111;padding:13px 24px;border-radius:30px;font-weight:800;margin-top:12px}.btn.blue{background:var(--blue);color:#fff}.hero-art{background:linear-gradient(140deg,#0b397b,#1689d5);border-radius:28px;min-height:290px;color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:27px;font-weight:800}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:13px 24px;border-radius:30px;font-weight:800;margin-top:12px}.btn.blue{background:var(--blue);color:#fff}.hero-art{background:linear-gradient(140deg,#0b397be8,#1689d5e8),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=85') center/cover;border-radius:28px;min-height:290px;color:white;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:27px;font-weight:800}
 section{padding:58px 5%}.section-title{text-align:center;margin:0 auto 30px;max-width:700px}.section-title h2{font-size:32px;color:var(--navy);margin:0 0 8px}.section-title p{color:var(--muted);margin:0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 25px #163a6810;border:1px solid #e2ebf7}.card .emoji{font-size:30px}.card h3{margin:8px 0;color:var(--navy)}.card p{color:var(--muted);margin:0}
 .steps{background:#eaf2ff}.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:white;padding:20px;border-radius:15px}.num{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:white;font-weight:800}
 .cta{background:var(--navy);color:white;text-align:center;border-radius:22px;padding:38px 20px}.cta h2{font-size:30px;margin:0 0 8px}.cta p{color:#d9e7ff}
 .faq details{background:#fff;padding:17px 20px;border-radius:12px;margin:10px 0}.faq summary{font-weight:800;cursor:pointer;color:var(--navy)}.faq p{color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:20px}
+.contact-card,.contact-form{background:#fff;border:1px solid #e2ebf7;border-radius:18px;padding:25px;box-shadow:0 8px 25px #163a6810}
+.contact-line{display:flex;gap:12px;align-items:flex-start;margin:16px 0}
+.contact-line b{display:block;color:var(--navy)}
+.contact-form label{display:block;font-weight:700;margin:12px 0 5px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:12px;border:1px solid #cbd8e8;border-radius:10px;font:inherit;background:#fbfdff}
+.contact-form textarea{min-height:100px;resize:vertical}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9;background:#20b95a;color:#fff;border-radius:40px;padding:13px 18px;font-weight:800;box-shadow:0 8px 25px #0003}
 footer{background:#061e46;color:#dce8ff;padding:32px 5%;text-align:center}footer strong{color:#fff}.disclaimer{font-size:12px;color:#c3d2e8;max-width:850px;margin:15px auto 0}
-@media(max-width:800px){nav{align-items:flex-start;flex-direction:column}.links{flex-wrap:wrap;gap:12px}.hero{grid-template-columns:1fr;padding-top:45px}.cards{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}.hero-art{min-height:190px}}
-@media(max-width:480px){.steps-grid{grid-template-columns:1fr}.top{font-size:12px}}
+@media(max-width:800px){nav{align-items:flex-start;flex-direction:column}.links{flex-wrap:wrap;gap:12px}.hero{grid-template-columns:1fr;padding-top:45px}.cards{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}.hero-art{min-height:190px}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.steps-grid{grid-template-columns:1fr}.top{font-size:12px}.whatsapp-float{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
@@ -46,9 +54,9 @@ footer{background:#061e46;color:#dce8ff;padding:32px 5%;text-align:center}footer
 <section id="scholarships">
   <div class="section-title"><h2>Scholarship Opportunities</h2><p>ফুল ফান্ডেড ও পার্শিয়াল স্কলারশিপ সম্পর্কে জানুন।</p></div>
   <div class="cards">
-    <article class="card"><div class="emoji">🏆</div><h3>Fully Funded Scholarships</h3><p>টিউশন ফি, ভাতা, আবাসনসহ বিভিন্ন ফান্ডিং সুবিধার সুযোগ খুঁজুন। প্রতিটি স্কলারশিপের শর্ত আলাদা।</p></article>
-    <article class="card"><div class="emoji">🎓</div><h3>Partial Scholarships</h3><p>আংশিক টিউশন ফি ছাড় বা অন্যান্য আর্থিক সহায়তার সুযোগ সম্পর্কে জানুন।</p></article>
-    <article class="card"><div class="emoji">🌍</div><h3>Country-wise Updates</h3><p>বিভিন্ন দেশের বিশ্ববিদ্যালয় ও স্কলারশিপের আবেদন সংক্রান্ত আপডেট।</p></article>
+    <article class="card"><div class="emoji">🏆</div><h3>Fully Funded Scholarships</h3><p>টিউশন ফি, মাসিক ভাতা, আবাসনসহ বিভিন্ন ফান্ডিং সুবিধার সুযোগ খুঁজুন। প্রতিটি স্কলারশিপের শর্ত আলাদা।</p><p><b>Bachelor • Masters • PhD</b></p><a class="btn blue" href="https://wa.me/8801647636141?text=আমি%20Fully%20Funded%20Scholarship%20সম্পর্কে%20জানতে%20চাই।">Enquire Now</a></article>
+    <article class="card"><div class="emoji">🎓</div><h3>Partial Scholarships</h3><p>আংশিক টিউশন ফি ছাড় বা অন্যান্য আর্থিক সহায়তার সুযোগ সম্পর্কে জানুন।</p><a class="btn blue" href="https://wa.me/8801647636141?text=আমি%20Partial%20Scholarship%20সম্পর্কে%20জানতে%20চাই।">Enquire Now</a></article>
+    <article class="card"><div class="emoji">🌍</div><h3>Country-wise Updates</h3><p>বিভিন্ন দেশের বিশ্ববিদ্যালয় ও স্কলারশিপের আবেদন সংক্রান্ত আপডেট।</p><a class="btn blue" href="https://wa.me/8801647636141?text=আমি%20দেশভিত্তিক%20Scholarship%20Update%20চাই।">Get Updates</a></article>
   </div>
 </section>
 <section id="selffund" style="background:#fff">
@@ -57,6 +65,11 @@ footer{background:#061e46;color:#dce8ff;padding:32px 5%;text-align:center}footer
     <article class="card"><div class="emoji">📚</div><h3>University & Course Search</h3><p>আপনার পছন্দের বিষয়, বাজেট ও যোগ্যতা অনুযায়ী বিশ্ববিদ্যালয় খুঁজতে সহায়তা।</p></article>
     <article class="card"><div class="emoji">💳</div><h3>Tuition & Cost Information</h3><p>টিউশন ফি, আবাসন ও সম্ভাব্য জীবনযাত্রার খরচ যাচাই করার নির্দেশনা।</p></article>
     <article class="card"><div class="emoji">📝</div><h3>Admission Guidance</h3><p>আবেদন, প্রয়োজনীয় কাগজপত্র ও বিশ্ববিদ্যালয়ের নির্দেশনা বুঝতে সহায়তা।</p></article>
+  </div>
+  <div style="max-width:900px;margin:22px auto 0;background:#eaf2ff;padding:22px;border-radius:16px;text-align:center">
+    <h3 style="color:#082b63;margin:0 0 6px">Russia • Chechnya</h3>
+    <p style="margin:0;color:#52627a">রাশিয়া ও চেচনিয়ায় পড়াশোনার সুযোগ, বিশ্ববিদ্যালয়, ভর্তি প্রক্রিয়া ও সম্ভাব্য খরচ সম্পর্কে তথ্য জানতে যোগাযোগ করুন।</p>
+    <a class="btn blue" href="https://wa.me/8801647636141?text=আমি%20Russia%20ও%20Chechnya-তে%20পড়াশোনার%20সুযোগ%20সম্পর্কে%20জানতে%20চাই।">Ask About Russia & Chechnya</a>
   </div>
 </section>
 <section class="steps" id="guidance">
@@ -80,10 +93,38 @@ footer{background:#061e46;color:#dce8ff;padding:32px 5%;text-align:center}footer
 </section>
 <section id="contact">
   <div class="section-title"><h2>Contact Us</h2><p>আপনার প্রশ্ন বা আগ্রহের বিষয় আমাদের জানান।</p></div>
-  <div class="cta"><h2>Let's Plan Your Study Abroad Journey</h2><p>এখানে আপনার WhatsApp নম্বর, ইমেইল ও সামাজিক যোগাযোগমাধ্যমের লিংক যোগ করুন।</p><a class="btn" href="https://wa.me/8801XXXXXXXXX">WhatsApp Us</a></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3 style="color:#082b63;margin-top:0">Get in Touch</h3>
+      <div class="contact-line"><span>📱</span><div><b>WhatsApp / Phone</b><a href="https://wa.me/8801647636141">+880 1647-636141</a></div></div>
+      <div class="contact-line"><span>✉️</span><div><b>Email</b><a href="mailto:gradmate.global.consultz@gmail.com">gradmate.global.consultz@gmail.com</a></div></div>
+      <div class="contact-line"><span>📍</span><div><b>Location</b>Russia, Chechnya</div></div>
+      <a class="btn" href="https://wa.me/8801647636141?text=Hello%20Gradmate%20Global%20Consultz">Chat on WhatsApp</a>
+    </div>
+    <form class="contact-form" onsubmit="sendWhatsApp(event)">
+      <h3 style="color:#082b63;margin:0">Send an Inquiry</h3>
+      <label for="name">আপনার নাম</label><input id="name" required placeholder="আপনার নাম লিখুন">
+      <label for="phone">ফোন / WhatsApp নম্বর</label><input id="phone" required placeholder="আপনার নম্বর লিখুন">
+      <label for="interest">আপনার আগ্রহ</label><select id="interest"><option>Fully Funded Scholarship</option><option>Partial Scholarship</option><option>Self-Funded Admission</option><option>Russia / Chechnya Study</option><option>Other</option></select>
+      <label for="message">আপনার মেসেজ</label><textarea id="message" placeholder="আপনি কী জানতে চান?"></textarea>
+      <button class="btn blue" type="submit">Send via WhatsApp →</button>
+    </form>
+  </div>
 </section>
 <footer><strong>Gradmate Global Consultz</strong><br>Dream • Apply • Study • Grow
+<div style="margin-top:12px"><a href="mailto:gradmate.global.consultz@gmail.com">Email</a> · <a href="https://wa.me/8801647636141">WhatsApp</a></div>
 <div class="disclaimer">Disclaimer: আমরা কোনো স্কলারশিপ, ভর্তি, ভিসা বা চাকরির নিশ্চয়তা দিই না। সুযোগ, যোগ্যতা, ফি ও সময়সীমা সংশ্লিষ্ট বিশ্ববিদ্যালয় বা প্রতিষ্ঠানের অফিসিয়াল ওয়েবসাইট থেকে যাচাই করুন।</div>
 </footer>
+<a class="whatsapp-float" href="https://wa.me/8801647636141?text=Hello%20Gradmate%20Global%20Consultz" target="_blank" rel="noopener">WhatsApp Chat</a>
+<script>
+function sendWhatsApp(event){
+  event.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const interest=document.getElementById('interest').value;
+  const message=document.getElementById('message').value.trim();
+  const text=`নতুন ওয়েবসাইট ইনকোয়ারি\nনাম: ${name}\nফোন: ${phone}\nআগ্রহ: ${interest}\nমেসেজ: ${message}`;
+  window.open('https://wa.me/8801647636141?text='+encodeURIComponent(text),'_blank');
+}
+</script>
 </body>
 </html>
